@@ -16,7 +16,12 @@ This repository uses GNU `make` to run build targets specified in `Makefile`. Co
 
 ### Setting Up The Development Environment
 
-1. To set up your python environment, we recommend creating and activating a virtual environment
+1. Install the aws cli [AWS CLI Installation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and jq
+```
+sudo apt  install jq
+```
+
+2. To set up your python environment, we recommend creating and activating a virtual environment
 using `venv`, which is part of the Python standard library for python3+:
 
 ```bash
@@ -48,6 +53,15 @@ export REGION=us-west-2
 export SPARK_REPOSITORY=sagemaker-spark
 export VERSION=latest
 export SAGEMAKER_ROLE=<YOUR_SAGEMAKER_ROLE>
+```
+
+7.If you see any `psutil` package intsallation failures:
+```
+deactivate
+rm -r .venv
+sudo apt-get install python3.X-dev
+sudo apt-get install gcc
+// redo from step-1
 ```
 
 ### Building Scala Test Dependencies

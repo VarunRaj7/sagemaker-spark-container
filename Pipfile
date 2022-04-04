@@ -32,6 +32,8 @@ smspark = {editable = true, path = "."}
 importlib-metadata = "==3.7.3"
 pytest-parallel = "==0.1.0"
 pytest-rerunfailures = "10.0"
+opencv-python = "==4.5.5.64"
+
 
 [requires]
 python_version = "3.7"
